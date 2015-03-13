@@ -1,0 +1,143 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'main.ui'
+#
+# Created: Thu Jan 15 19:39:03 2015
+#      by: PyQt4 UI code generator 4.11.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.resize(769, 609)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.horizontalLayout_4 = QtGui.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
+        self.verticalLayout_4 = QtGui.QVBoxLayout()
+        self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
+        self.splitter = QtGui.QSplitter(self.centralwidget)
+        self.splitter.setOrientation(QtCore.Qt.Horizontal)
+        self.splitter.setObjectName(_fromUtf8("splitter"))
+        self.widget = QtGui.QWidget(self.splitter)
+        self.widget.setObjectName(_fromUtf8("widget"))
+        self.verticalLayout_3 = QtGui.QVBoxLayout(self.widget)
+        self.verticalLayout_3.setMargin(0)
+        self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
+        self.verticalLayout = QtGui.QVBoxLayout()
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.lineEdit = QtGui.QLineEdit(self.widget)
+        self.lineEdit.setObjectName(_fromUtf8("lineEdit"))
+        self.horizontalLayout.addWidget(self.lineEdit)
+        self.toolButton = QtGui.QToolButton(self.widget)
+        self.toolButton.setObjectName(_fromUtf8("toolButton"))
+        self.horizontalLayout.addWidget(self.toolButton)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.label = QtGui.QLabel(self.widget)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.horizontalLayout_2.addWidget(self.label)
+        self.radioButton = QtGui.QRadioButton(self.widget)
+        self.radioButton.setObjectName(_fromUtf8("radioButton"))
+        self.horizontalLayout_2.addWidget(self.radioButton)
+        self.radioButton_2 = QtGui.QRadioButton(self.widget)
+        self.radioButton_2.setObjectName(_fromUtf8("radioButton_2"))
+        self.horizontalLayout_2.addWidget(self.radioButton_2)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.verticalLayout_3.addLayout(self.verticalLayout)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        self.textBrowser = QtGui.QTextBrowser(self.widget)
+        self.textBrowser.setObjectName(_fromUtf8("textBrowser"))
+        self.horizontalLayout_3.addWidget(self.textBrowser)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_3)
+        self.label_2 = QtGui.QLabel(self.splitter)
+        self.label_2.setText(_fromUtf8(""))
+        self.label_2.setPixmap(QtGui.QPixmap(_fromUtf8("../Pictures/head.jpg")))
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.verticalLayout_4.addWidget(self.splitter)
+        self.verticalLayout_2 = QtGui.QVBoxLayout()
+        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.textBrowser_2 = QtGui.QTextBrowser(self.centralwidget)
+        self.textBrowser_2.setObjectName(_fromUtf8("textBrowser_2"))
+        self.verticalLayout_2.addWidget(self.textBrowser_2)
+        self.verticalLayout_4.addLayout(self.verticalLayout_2)
+        self.horizontalLayout_4.addLayout(self.verticalLayout_4)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtGui.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 769, 29))
+        self.menubar.setObjectName(_fromUtf8("menubar"))
+        self.menuFile = QtGui.QMenu(self.menubar)
+        self.menuFile.setObjectName(_fromUtf8("menuFile"))
+        self.menuEdit = QtGui.QMenu(self.menubar)
+        self.menuEdit.setObjectName(_fromUtf8("menuEdit"))
+        self.menuHelp = QtGui.QMenu(self.menubar)
+        self.menuHelp.setObjectName(_fromUtf8("menuHelp"))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtGui.QStatusBar(MainWindow)
+        self.statusbar.setObjectName(_fromUtf8("statusbar"))
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionPaste = QtGui.QAction(MainWindow)
+        self.actionPaste.setObjectName(_fromUtf8("actionPaste"))
+        self.actionPreference = QtGui.QAction(MainWindow)
+        self.actionPreference.setObjectName(_fromUtf8("actionPreference"))
+        self.actionAbout = QtGui.QAction(MainWindow)
+        self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
+        self.actionClose = QtGui.QAction(MainWindow)
+        self.actionClose.setObjectName(_fromUtf8("actionClose"))
+        self.menuFile.addAction(self.actionClose)
+        self.menuEdit.addAction(self.actionPaste)
+        self.menuEdit.addSeparator()
+        self.menuEdit.addAction(self.actionPreference)
+        self.menuHelp.addAction(self.actionAbout)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuEdit.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        self.toolButton.setText(_translate("MainWindow", "...", None))
+        self.label.setText(_translate("MainWindow", "search using", None))
+        self.radioButton.setText(_translate("MainWindow", "RadioButton", None))
+        self.radioButton_2.setText(_translate("MainWindow", "RadioButton", None))
+        self.menuFile.setTitle(_translate("MainWindow", "file", None))
+        self.menuEdit.setTitle(_translate("MainWindow", "edit", None))
+        self.menuHelp.setTitle(_translate("MainWindow", "help", None))
+        self.actionPaste.setText(_translate("MainWindow", "paste", None))
+        self.actionPreference.setText(_translate("MainWindow", "preference", None))
+        self.actionAbout.setText(_translate("MainWindow", "about", None))
+        self.actionClose.setText(_translate("MainWindow", "close", None))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    MainWindow = QtGui.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+

@@ -1,0 +1,12 @@
+<RCC>
+  <qresource>
+    <file>resource.qrc</file>
+    <file>ico/video.png</file>
+    <file>ico/down.ico</file>
+    <file>ico/settings.ico</file>
+    <file>ico/eye.ico</file>
+    <file>ico/lord-shiva.jpg</file>
+    <file>ico/edit.ico</file>
+    <file>ico/drop.ico</file>
+ </qresource>
+</RCC>
