@@ -16,18 +16,25 @@ class DataGeneratorJson(object):
             if plot == "long": self.payload.update({'plot':'full'})
         finally:
             self.payload.update({'t':title})
-            req = requests.get(self._url, params = self.payload)
-            data = req.json()
-            return data
-    
+            try:
+                req = requests.get(self._url, params = self.payload)
+                data = req.json()
+                return data
+            except requests.ConnectionError as e:
+                return None
+            
+        
     def getDataBySearch(self,title):
         try:
             if self.payload.has_key('t'):del self.payload['t']
         finally:
             self.payload.update({'s':title})
-            req = requests.get(self._url,params = self.payload)
-            data = req.json()
-            return data
+            try:
+                req = requests.get(self._url,params = self.payload)
+                data = req.json()
+                return data
+            except requests.ConnectionError as e:
+                return None
 class DataGeneratorImage(object):
     def getImage(self,data):
         if data.has_key('Poster'):
