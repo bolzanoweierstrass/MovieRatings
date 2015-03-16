@@ -4,8 +4,9 @@ little things are to be done but it will work,
 requirements:
 for now this works only on linux os, i will try to port to windows also in mean time
 
-it requires qt4
-for ubuntu and debian
+this requires qt4 for installing qt4 on ubuntu type the following in your terminal
+
+
   `sudo apt-get install python-qt4`
 
 that's all you need
