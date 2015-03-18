@@ -13,5 +13,6 @@ sudo apt-get install python-qt4
 
 that's all you need
 and to run the program
-
-  `python app.py`
+``` sh
+python app.py
+```
