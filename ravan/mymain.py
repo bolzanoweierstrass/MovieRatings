@@ -2,6 +2,7 @@ from guimain.mainwindow import Ui_MainWindow
 from PyQt4 import QtGui
 from ravan.myabout import MyAboutWindow
 from utilsmain.Mythreads import ThreadGetJson
+from PyQt4.QtGui import QMessageBox
 class MymainWindow(QtGui.QMainWindow):
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
@@ -18,18 +19,21 @@ class MymainWindow(QtGui.QMainWindow):
     def onBtnClicked(self):
         self.clearall()
         title = str(self.ui.lne_url.text())
-        condition  = str(self.ui.cmb_input.currentText())
-        if condition == 'title':
-            self.thjson = ThreadGetJson(title,0)
-            self.thjson.start()
-            self.thjson.jsonready.connect(self.printit)
-            self.thjson.empty.connect(self.sorry)
-            self.thjson.imgready.connect(self.displayimg)
-        elif condition == 'search':
-            self.thjson = ThreadGetJson(title,1)
-            self.thjson.start()
-            self.thjson.empty.connect(self.sorry2)
-            self.thjson.jsonready.connect(self.mysearch)
+        if not len(title) == 0:
+            condition  = str(self.ui.cmb_input.currentText())
+            if condition == 'title':
+                self.thjson = ThreadGetJson(title,0)
+                self.thjson.start()
+                self.thjson.jsonready.connect(self.printit)
+                self.thjson.empty.connect(self.sorry)
+                self.thjson.imgready.connect(self.displayimg)
+            elif condition == 'search':
+                self.thjson = ThreadGetJson(title,1)
+                self.thjson.start()
+                self.thjson.empty.connect(self.sorry2)
+                self.thjson.jsonready.connect(self.mysearch)
+        elif len(title) == 0:
+            QMessageBox.information(self, "hello there?", "i need some input here")
         
        
         
@@ -41,7 +45,7 @@ class MymainWindow(QtGui.QMainWindow):
     def printit(self,data):
         mykeys = ['Title','Actors','Writer','Director','Released','Type','Genre','Language','Country','Runtime','Awards','tomatoImage','tomatoMeter','imdbRating']
         for k in mykeys:
-            self.ui.txtB_title.append(k+' ===>  '+data[k] + "\n")
+            self.ui.txtB_title.append(k+' ===>  '+data[k])
         self.ui.txtB_plot.append("plot" + "===>" + data['Plot'] + "\n")
         self.ui.txtB_plot.append("tomatoConsensus" + "====>" + data["tomatoConsensus"])
         
